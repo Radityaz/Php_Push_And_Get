@@ -56,7 +56,8 @@
             <td>Nama</td>
             <td>Alamat</td>
             <td>Umur</td>
-            <td>Gambar</td>
+            <!-- <td>Gambar</td> -->
+            <td>Aksi</td>
         </tr>
         <?php
         $nomor = 1;
@@ -68,7 +69,11 @@
                 <td><?= $siswa["nama"]; ?></td>
                 <td><?= $siswa["alamat"]; ?></td>
                 <td><?= $siswa["umur"]; ?></td>
-                <td><img src="<?= $siswa["foto"];?>" style="height: 100px; width: 100px"></td>
+                <!-- <td><img src="<?= $siswa["foto"];?>" style="height: 100px; width: 100px"></td> -->
+                <td>
+                    <a type="button" class="btn btn-warning" href="">Ubah</a>
+                    <a type="button" class="btn btn-danger" href="hapus.php? myid= <?=$siswa["id"]?> ">Hapus</a>
+                </td>
             </tr>
         <?php
             }

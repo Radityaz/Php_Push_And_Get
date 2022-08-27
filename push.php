@@ -42,19 +42,19 @@
         <form action="" method="Post">
             <div class="formgroup">
                 <label for="nama"></label>
-                <input type="text" class="form-control" name="nama" placeholder="Insert Nama..." >
+                <input type="text" class="form-control" name="nama" placeholder="Insert Nama..." required>
             </div>
             <div class="formgroup">
                 <label for="Umur"></label>
-                <input type="text" class="form-control" name="umur" placeholder="Insert Umur..." >
+                <input type="text" class="form-control" name="umur" placeholder="Insert Umur..." required >
             </div>
             <div class="formgroup">
                 <label for="Alamat"></label>
-                <input type="text" class="form-control" name="alamat" placeholder="Insert Alamat..." >
+                <input type="text" class="form-control" name="alamat" placeholder="Insert Alamat..." required >
             </div>
             <div class="formgroup">
                 <label for="Foto"></label>
-                <input type="file" class="form-control" name="foto" placeholder="Insert Foto..." >
+                <input type="file" class="form-control" name="foto" placeholder="Insert Foto..." required >
             </div>
             <br>
             <button type="submit" class="btn btn-primary float-end" name="submit">Submit</button>

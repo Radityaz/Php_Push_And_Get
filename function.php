@@ -14,9 +14,9 @@
     function tambah($data) {
         global $conn;
     
-        $nama = $data["nama"];
-        $umur = $data["umur"];
-        $alamat = $data["alamat"];
+        $nama = htmlspecialchars($data["nama"]);
+        $umur = htmlspecialchars($data["umur"]);
+        $alamat = htmlspecialchars($data["alamat"]);    
         $foto = $data["foto"];
     
         $query = "INSERT INTO tb_siswa
@@ -24,6 +24,12 @@
             
         mysqli_query($conn, $query);
     
+        return mysqli_affected_rows($conn);
+    }
+
+    function hapus($id){
+        global $conn;
+        mysqli_query($conn,"DELETE FROM tb_siswa WHERE id=$id");
         return mysqli_affected_rows($conn);
     }
 
