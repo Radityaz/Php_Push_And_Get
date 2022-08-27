@@ -4,22 +4,22 @@
 
 <?php
     require "function.php";
+    $id = $_GET["myid"];
+
+    $datasiswa = query("SELECT * FROM tb_siswa WHERE id = $id")[0];
 
     if (isset($_POST['submit'])) {
     if (tambah($_POST) > 0) {
-        echo "
-            script>
+        echo "<script>
                 alert('Data Berhasil Ditambahkan');
                 document.location.href = 'Home.php';
-            </script>
-        ";
+            </script>";
     } else {
         echo "
-            script>
+            <script>
                 alert('Data Gagal Ditambahkan');
                 document.location.href = 'Home.php';
-            </script>
-        ";
+            </script>";
     }
 }
 ?>
@@ -37,24 +37,24 @@
 
 </head>
 <body>
-<h1>Tambah Data</h1>
+<h1>Ubah Data</h1>
     <div class="card" style="margin: 20px;" >
         <form action="" method="Post">
             <div class="formgroup">
                 <label for="nama"></label>
-                <input type="text" class="form-control" name="nama" placeholder="Insert Nama..." required>
+                <input type="text" class="form-control" name="nama" placeholder="Insert Nama..." required value="<?= $datasiswa["nama"] ?>">
             </div>
             <div class="formgroup">
                 <label for="Umur"></label>
-                <input type="text" class="form-control" name="umur" placeholder="Insert Umur..." required >
+                <input type="text" class="form-control" name="umur" placeholder="Insert Umur..." required value="<?= $datasiswa["umur"] ?>">
             </div>
             <div class="formgroup">
                 <label for="Alamat"></label>
-                <input type="text" class="form-control" name="alamat" placeholder="Insert Alamat..." required >
+                <input type="text" class="form-control" name="alamat" placeholder="Insert Alamat..." required value="<?= $datasiswa["alamat"] ?>">
             </div>
             <div class="formgroup">
                 <label for="Foto"></label>
-                <input type="text" class="form-control" name="foto" placeholder="Insert Foto..." required >
+                <input type="text" class="form-control" name="foto" placeholder="Insert Foto..." required value="<?= $datasiswa["foto"] ?>">
             </div>
             <br>
             <button type="submit" class="btn btn-primary float-end" name="submit">Submit</button>
