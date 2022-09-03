@@ -27,19 +27,22 @@
         return mysqli_affected_rows($conn);
     }
 
-    function change($data) {
+    function ubah($data) {
         global $conn;
+        $id = $data['id'];
         $nama = htmlspecialchars($data["nama"]);
         $umur = htmlspecialchars($data["umur"]);
         $alamat = htmlspecialchars($data["alamat"]);    
-        $foto = $data["foto"];
-    
+        $foto = htmlspecialchars($data["foto"]);
+
         $query = "UPDATE tb_siswa
-            VALUES ('', '$nama', '$umur', '$alamat', '$foto')";
+            SET nama = '$nama',  umur = '$umur', alamat = '$alamat', foto = '$foto'
+            WHERE id = $id";
             
         mysqli_query($conn, $query);
-    
         return mysqli_affected_rows($conn);
+    
+
     }
 
     function hapus($id){

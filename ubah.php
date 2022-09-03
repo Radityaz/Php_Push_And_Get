@@ -9,7 +9,7 @@
     $datasiswa = query("SELECT * FROM tb_siswa WHERE id = $id")[0];
 
     if (isset($_POST['ubah'])) {
-    if (change($_POST) > 0) {
+    if (ubah($_POST) > 0) {
         echo "<script>
                 alert('Data Berhasil Diganti');
                 document.location.href = 'Home.php';
@@ -40,21 +40,22 @@
 <h1>Ubah Data</h1>
     <div class="card" style="margin: 20px;" >
         <form action="" method="Post">
+            <input type="hidden" name="id" value="<?=$datasiswa["id"] ?>">
             <div class="formgroup">
                 <label for="nama"></label>
-                <input type="text" class="form-control" name="nama" placeholder="Insert Nama..." required value="<?= $datasiswa["nama"] ?>">
+                <input type="text" class="form-control" name="nama" id="nama" placeholder="Insert Nama..." required value="<?= $datasiswa["nama"] ?>">
             </div>
             <div class="formgroup">
                 <label for="Umur"></label>
-                <input type="text" class="form-control" name="umur" placeholder="Insert Umur..." required value="<?= $datasiswa["umur"] ?>">
+                <input type="text" class="form-control" name="umur" id="umur" placeholder="Insert Umur..." required value="<?= $datasiswa["umur"] ?>">
             </div>
             <div class="formgroup">
                 <label for="Alamat"></label>
-                <input type="text" class="form-control" name="alamat" placeholder="Insert Alamat..." required value="<?= $datasiswa["alamat"] ?>">
+                <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Insert Alamat..." required value="<?= $datasiswa["alamat"] ?>">
             </div>
             <div class="formgroup">
                 <label for="Foto"></label>
-                <input type="text" class="form-control" name="foto" placeholder="Insert Foto..." required value="<?= $datasiswa["foto"] ?>">
+                <input type="text" class="form-control" name="foto" id="foto" placeholder="Insert Foto..." required value="<?= $datasiswa["foto"] ?>">
             </div>
             <br>
             <button type="submit" class="btn btn-primary float-end" name="ubah">Submit</button>
