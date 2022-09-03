@@ -74,13 +74,13 @@
                 <!-- <td><img src="<?= $siswa["foto"];?>" style="height: 100px; width: 100px"></td> -->
                 <td>
                     <a type="button" class="btn btn-warning" href="ubah.php? myid= <?=$siswa["id"]?>" >Ubah</a>
-                    <a type="button" class="btn btn-info" href="" data-bs-toggle="modal" data-bs-target="#exampleModal<?$siswa['id']; ?>">Detail</a>
+                    <a type="button" class="btn btn-info" href="" data-bs-toggle="modal" data-bs-target="#exampleModal<?= $siswa['id']; ?>">Detail</a>
                     <a type="button" class="btn btn-danger" href="hapus.php? myid= <?=$siswa["id"]?> ">Hapus</a>
                 </td>
             </tr>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal<?$siswa['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal<?= $siswa['id']; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
@@ -89,8 +89,16 @@
             </div>
             <div class="modal-body">
             <div class="formgroup">
-                <label for="nama"></label>
-                <input type="text" class="form-control" name="nama" value=<?= $datasiswa["nama"] ?>" readonly>
+                <label>Nama</label>
+                <input type="text" class="form-control" name="nama" id="nama" value="<?= $siswa["nama"]; ?>" readonly>
+            </div>
+            <div class="formgroup">
+                <label>Umur</label>
+                <input type="text" class="form-control" name="alamat" id="alamat" value="<?= $siswa["alamat"]; ?>" readonly>
+            </div>
+            <div class="formgroup">
+                <label>Alamat</label>
+                <input type="text" class="form-control" name="umur" id="umur" value="<?= $siswa["umur"]; ?>" readonly>
             </div>
             </div>
             <div class="modal-footer">
