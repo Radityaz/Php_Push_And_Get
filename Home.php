@@ -100,6 +100,10 @@
                 <label>Alamat</label>
                 <input type="text" class="form-control" name="umur" id="umur" value="<?= $siswa["umur"]; ?>" readonly>
             </div>
+            <div class="formgroup">
+                <label>Foto</label>
+                <img src="<?= $siswa["foto"];?>" style="height: 100px; width: 100px">
+            </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
