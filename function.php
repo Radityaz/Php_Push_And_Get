@@ -27,6 +27,21 @@
         return mysqli_affected_rows($conn);
     }
 
+    function change($data) {
+        global $conn;
+        $nama = htmlspecialchars($data["nama"]);
+        $umur = htmlspecialchars($data["umur"]);
+        $alamat = htmlspecialchars($data["alamat"]);    
+        $foto = $data["foto"];
+    
+        $query = "UPDATE tb_siswa
+            VALUES ('', '$nama', '$umur', '$alamat', '$foto')";
+            
+        mysqli_query($conn, $query);
+    
+        return mysqli_affected_rows($conn);
+    }
+
     function hapus($id){
         global $conn;
         mysqli_query($conn,"DELETE FROM tb_siswa WHERE id=$id");

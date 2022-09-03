@@ -8,20 +8,20 @@
 
     $datasiswa = query("SELECT * FROM tb_siswa WHERE id = $id")[0];
 
-    if (isset($_POST['submit'])) {
-    if (tambah($_POST) > 0) {
+    if (isset($_POST['ubah'])) {
+    if (change($_POST) > 0) {
         echo "<script>
-                alert('Data Berhasil Ditambahkan');
+                alert('Data Berhasil Diganti');
                 document.location.href = 'Home.php';
             </script>";
     } else {
         echo "
             <script>
-                alert('Data Gagal Ditambahkan');
+                alert('Data Gagal Diganti');
                 document.location.href = 'Home.php';
             </script>";
     }
-}
+    }
 ?>
 
 
@@ -57,7 +57,7 @@
                 <input type="text" class="form-control" name="foto" placeholder="Insert Foto..." required value="<?= $datasiswa["foto"] ?>">
             </div>
             <br>
-            <button type="submit" class="btn btn-primary float-end" name="submit">Submit</button>
+            <button type="submit" class="btn btn-primary float-end" name="ubah">Submit</button>
         </form>
     </div>
 </body>

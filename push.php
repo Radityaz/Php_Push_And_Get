@@ -8,14 +8,14 @@
     if (isset($_POST['submit'])) {
     if (tambah($_POST) > 0) {
         echo "
-            script>
+            <script>
                 alert('Data Berhasil Ditambahkan');
                 document.location.href = 'Home.php';
             </script>
         ";
     } else {
         echo "
-            script>
+            <script>
                 alert('Data Gagal Ditambahkan');
                 document.location.href = 'Home.php';
             </script>
@@ -54,7 +54,7 @@
             </div>
             <div class="formgroup">
                 <label for="Foto"></label>
-                <input type="text" class="form-control" name="foto" placeholder="Insert Foto..." required >
+                <input type="textaq123" class="form-control" name="foto" placeholder="Insert Foto..." required >
             </div>
             <br>
             <button type="submit" class="btn btn-primary float-end" name="submit">Submit</button>
