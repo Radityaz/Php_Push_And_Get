@@ -54,6 +54,10 @@
                 <input type="text" class="form-control" name="alamat" id="alamat" placeholder="Insert Alamat..." required value="<?= $datasiswa["alamat"] ?>">
             </div>
             <div class="formgroup">
+                <label for="Tanggal"></label>
+                <input type="date" class="form-control" name="tanggal" id="tanggal" placeholder="Insert Alamat..." required value="<?= $datasiswa["tanggal"] ?>">
+            </div>
+            <div class="formgroup">
                 <label for="Foto"></label>
                 <input type="text" class="form-control" name="foto" id="foto" placeholder="Insert Foto..." required value="<?= $datasiswa["foto"] ?>">
             </div>

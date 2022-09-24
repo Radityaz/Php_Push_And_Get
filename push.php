@@ -53,8 +53,12 @@
                 <input type="text" class="form-control" name="alamat" placeholder="Insert Alamat..." required >
             </div>
             <div class="formgroup">
+                <label for="Tanggal"></label>
+                <input type="date" class="form-control" name="tanggal" placeholder="Insert Alamat..." required >
+            </div>
+            <div class="formgroup">
                 <label for="Foto"></label>
-                <input type="textaq123" class="form-control" name="foto" placeholder="Insert Foto..." required >
+                <input type="file" class="form-control" name="foto" placeholder="Insert Foto..." required >
             </div>
             <br>
             <button type="submit" class="btn btn-primary float-end" name="submit">Submit</button>

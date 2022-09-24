@@ -58,6 +58,7 @@
             <td>Nama</td>
             <td>Alamat</td>
             <td>Umur</td>
+            <td>Tanggal</td>
             <!-- <td>Gambar</td> -->
             <td>Aksi</td>
         </tr>
@@ -71,6 +72,7 @@
                 <td><?= $siswa["nama"]; ?></td>
                 <td><?= $siswa["alamat"]; ?></td>
                 <td><?= $siswa["umur"]; ?></td>
+                <td><?= $siswa["tanggal"]; ?></td>
                 <!-- <td><img src="<?= $siswa["foto"];?>" style="height: 100px; width: 100px"></td> -->
                 <td>
                     <a type="button" class="btn btn-warning" href="ubah.php? myid= <?=$siswa["id"]?>" >Ubah</a>
@@ -99,6 +101,10 @@
             <div class="formgroup">
                 <label>Alamat</label>
                 <input type="text" class="form-control" name="umur" id="umur" value="<?= $siswa["umur"]; ?>" readonly>
+            </div>
+            <div class="formgroup">
+                <label>Tanggal</label>
+                <input type="text" class="form-control" name="tanggal" id="tanggal" value="<?= $siswa["tanggal"]; ?>" readonly>
             </div>
             <div class="formgroup">
                 <label>Foto</label>

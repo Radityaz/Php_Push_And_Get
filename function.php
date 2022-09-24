@@ -16,11 +16,12 @@
     
         $nama = htmlspecialchars($data["nama"]);
         $umur = htmlspecialchars($data["umur"]);
+        $tanggal = htmlspecialchars($data["tanggal"]);
         $alamat = htmlspecialchars($data["alamat"]);    
         $foto = $data["foto"];
     
         $query = "INSERT INTO tb_siswa
-            VALUES ('', '$nama', '$umur', '$alamat', '$foto')";
+            VALUES ('', '$nama', '$umur', '$alamat','$tanggal' , '$foto')";
             
         mysqli_query($conn, $query);
     
@@ -33,10 +34,11 @@
         $nama = htmlspecialchars($data["nama"]);
         $umur = htmlspecialchars($data["umur"]);
         $alamat = htmlspecialchars($data["alamat"]);    
+        $tanggal = htmlspecialchars($data["tanggal"]);  
         $foto = htmlspecialchars($data["foto"]);
 
         $query = "UPDATE tb_siswa
-            SET nama = '$nama',  umur = '$umur', alamat = '$alamat', foto = '$foto'
+            SET nama = '$nama',  umur = '$umur', alamat = '$alamat', tanggal = '$tanggal', foto = '$foto'
             WHERE id = $id";
             
         mysqli_query($conn, $query);
